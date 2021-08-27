@@ -1,0 +1,278 @@
+/*CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Generalised Property for whole page*/
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7rem;
+
+}
+/*A Simple preset for all our links*/
+a {
+    text-decoration: none;
+    color: #333;
+}
+/*Providing a bit bottom space in Headings*/
+h1, h2, h3{
+    padding-bottom: 20px;
+}
+/*Providing a bit space btw Paragraphs*/
+p{
+    padding: 10px 0;
+}
+/*Utiliy class for container, we wrap container around our ul li as to make them a bit centre at max width 
+and Let the navbar out of container so as backgroud color will strecth the whole page width
+and will make our page look a bit responsive*/
+
+.container{
+    margin: auto; /*will make our element centre*/
+    padding: 0 20px; /*providing a bit space from edges*/
+    max-width: 1100px;
+    overflow: auto; /*to make nav backgroud strecth the whole page width*/
+}
+
+/*Another utility class setup*/
+.text-primary{
+    color: #f7c08a;
+}
+
+.lead{
+    font-size: 20px;
+    
+}
+
+.btn{
+    padding: 13px 20px;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    display: inline-block;
+    font-size: 18px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #f7c08a;
+    color:#333;
+}
+
+.btn-light{
+    background: rgb(197, 194, 194);
+    color: #333;
+}
+.bg-dark{
+    background: #333;
+    color: #fff;
+}
+.bg-primary{
+    background: #f7c08a;
+    color: #333;
+}
+.bg-light{
+    background: rgb(236, 234, 234);
+    color: #333;
+}
+.clr{
+    clear: both; /*for clearing out float as it creates issue*/
+}
+
+/*Navbar Styling*/
+
+#navbar{
+    background: #333;
+    overflow: auto; /*this property let the background-color to be maintained in case of float property cause some trouble*/
+    color: #fff;
+}
+/*targetting anchor elements for filling colors*/
+#navbar a{
+    color: #fff;
+}
+/*need to target the h1 for making Logo look good*/
+#navbar h1{
+    float: left;
+    padding-top: 20px;
+}
+
+/*making ul go right as to make navbar look appropriate*/
+#navbar ul{
+    float: right;
+    list-style: none;
+}
+
+#navbar ul li{
+    float: left;
+}
+/*to make space btw menu items we need to add padding to each a item but first we need to make them block element so as to add padding*/
+#navbar ul li a{
+ display: block;
+ padding: 20px;
+ text-align: center;
+}
+/*adding padding to a tag cover full area per menu item at the time of hovering*/
+
+#navbar ul li a:hover, 
+#navbar ul li a.current{ /*adding current class as Effect would remain same when on a menu page*/
+    background: #444;
+    color: #f7c08a;
+}
+
+/*Showcase*/
+#showcase{
+    background: url("../img/showcase.jpg") no-repeat center center/cover; /*here double .. means go one folder up and into img folder*/
+    height: 600px;
+}
+
+#showcase .showcase-content{
+    color: #fff;
+    text-align: center;
+    padding-top: 170px;
+}
+
+#showcase .showcase-content h1{
+    font-size: 60px;
+    line-height: 1.2em;
+}
+
+#showcase .showcase-content p{
+    padding-bottom: 20px;
+    line-height: 1.7em;
+}
+
+/*Styling Home Section*/
+#home-info{
+    height: 400px;                    /*providing a height of 400px as just to take a fixed space*/
+}
+
+.home-img{
+    width: 50%;
+    float: left;
+    background: url("../img/photo-1.jpg") no-repeat ;
+    min-height: 100%; /*in float property the backgroud wont be visible w/o providing it max height
+    to cover the 400px area*/
+}
+
+.home-content{
+    width: 50%;
+    float:right;
+    text-align: center;
+    min-height: 100%;
+    overflow: hidden; /*if content is more than what can be shown in max height than that content will
+    be hidden and there wont be any extra scroll bar to view that specific content*/
+    padding: 50px 30px;
+}
+
+.home-content h2{
+    line-height: 1.2em;
+    font-size: 30px;
+}
+.home-content p{
+    padding-bottom: 30px;
+    font-size: 18px;
+}
+
+/*Features Section*/
+.box{
+    text-align: center;
+    float: left;
+    width: 33.3%;
+    padding: 50px;
+}
+
+.box .fas{
+    margin-bottom: 15px;
+}
+/*main footer*/
+#main-footer{
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+}
+
+
+/*About Page*/
+#about-info{
+    padding: 30px 0;
+}
+
+#about-info .info-left{
+    float: left;
+    width: 50%;
+    min-height: 100%;
+}
+#about-info .info-right{
+    float: right;
+    width: 50%;
+    min-height: 100%;
+}
+#about-info .info-right img{
+   display: block;
+    width: 70%;
+    margin: auto;
+    border-radius: 50%;
+}
+#about-info .info-left h1{
+    font-size: 40px;
+}
+
+
+.testimonial{
+    height: 600px;
+    padding-top : 70px ;
+    background: url("../img/test-bg.jpg") no-repeat center center/cover;
+}
+.testimonial h2{
+    font-size: 50px;
+    padding-top: 40px;
+    padding-bottom: 80px;
+    color: #fff;
+    text-align: center;
+}
+.testimonial .testimonials{
+    padding: 30px;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    border-radius: 5px;
+}
+
+.testimonial .testimonials img{
+    display: block;
+    width: 90px;
+    border-radius: 50%;
+    margin-right: 20px;
+    float: left;
+}
+
+/*Contact Form */
+
+#contact-form{
+    padding: 40px;
+}
+
+#contact-form h1{
+    font-size: 40px;
+}
+
+#contact-form .form-group{
+    margin-bottom: 20px;
+
+}
+
+.form-group label{
+    display: block;
+    margin-bottom: 5px;
+}
+#contact-form input, textarea{
+    padding: 10px;
+    width: 100%;
+    border: 1px solid gray;
+}
+#contact-form textarea{
+    height: 200px;
+}
+
+#contact-form input:focus, textarea:focus{
+    outline: none;
+    border-color: #f7c08a;
+}
