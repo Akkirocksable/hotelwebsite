@@ -142,7 +142,7 @@ and will make our page look a bit responsive*/
 
 /*Styling Home Section*/
 #home-info{
-    height: 400px;                    /*providing a height of 400px as just to take a fixed space*/
+    height: 500px;                    /*providing a height of 400px as just to take a fixed space*/
 }
 
 .home-img{
@@ -157,7 +157,7 @@ and will make our page look a bit responsive*/
     width: 50%;
     float:right;
     text-align: center;
-    min-height: 100%;
+    height: 100%;
     overflow: hidden; /*if content is more than what can be shown in max height than that content will
     be hidden and there wont be any extra scroll bar to view that specific content*/
     padding: 50px 30px;
@@ -218,7 +218,7 @@ and will make our page look a bit responsive*/
 
 
 .testimonial{
-    height: 600px;
+    height: 100%;
     padding-top : 70px ;
     background: url("../img/test-bg.jpg") no-repeat center center/cover;
 }
